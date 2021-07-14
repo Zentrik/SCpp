@@ -72,17 +72,20 @@ To change which method is used (lqr vs sc_oneshot ...) edit CMakeLists.txt
 
 If `CMake Error: The current CMakeCache.txt directory /home/SCpp/build/CMakeCache.txt is different than the directory /home/build where CMakeCache.txt was created.` then search for all CMakeCache.txt and in SCpp and delete all. Command to do this is `find . -name "CMakeCache.txt" -delete`, make sure you are in build directory when you do this.
 
-X is [mass, position, velocity, quaternion, angular velocity]. https://github.com/EmbersArc/SCpp/blob/master/scpp_models/src/rocketQuat.cpp#L20
-U is [Thrust, roll_torque] 
+X is [mass, position, velocity, quaternion, angular velocity] (https://github.com/EmbersArc/SCpp/blob/master/scpp_models/src/rocketQuat.cpp#L20).
+
+U is [Thrust, roll_torque] (https://github.com/EmbersArc/SCpp/blob/master/scpp_models/src/rocketQuat.cpp#L27).
 ### Run
 
 Available executables are:
 
 * **LQR_sim** to simulate a trajectory with the classic MPC controller
-This didn't work with RocketQuat either for me.
+                
+    This didn't work with RocketQuat either for me.
 
-* **MPC_sim** to simulate a trajectory with the classic MPC controller.
-I don't think this can be used with RocketQuat as scpp_models/config/RocketQuat/MPC.info is nonexistent.
+* **MPC_sim** to simulate a trajectory with the classic MPC controller
+
+  I don't think this can be used with RocketQuat as scpp_models/config/RocketQuat/MPC.info is nonexistent.
 
 * **SC_oneshot** to calculate one trajectory with Successive Convexification
 
