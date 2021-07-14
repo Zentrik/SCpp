@@ -6,7 +6,9 @@ scene = bpy.context.scene
 
 PATH = bpy.path.abspath("//../../output/RocketQuat/SC")
 path = PATH + "/" + sorted(listdir(PATH))[-1]
-path += "/" + sorted(listdir(path))[-1]
+
+iteration_folders = filter(lambda s: s.isdigit(),listdir(path))
+path += "/" + sorted(iteration_folders)[-1]
 print(path)
 
 FPS = scene.render.fps
@@ -22,7 +24,7 @@ except OSError:
 
 K = X.shape[0]
 dt = int(FPS * t / K)
-scene.frame_end = int(t * FPS)
+scene.frame_end = int(t * FPS) + FPS
 
 body_ob = bpy.data.objects.get("Starship")
 eng1_ob = bpy.data.objects.get("Engine1")
@@ -48,7 +50,7 @@ for k in range(K):
     scene.frame_current = dt * k
     x = X[k]
     u = U[k]
-    body_ob.location = x[1:4] / 100
+    body_ob.location = x[1:4] / 10
     body_ob.rotation_quaternion = x[7:11]
     body_ob.keyframe_insert(data_path='location')
     body_ob.keyframe_insert(data_path='rotation_quaternion')
@@ -56,7 +58,7 @@ for k in range(K):
     rx = np.arctan(-u[1] / u[2])
     ry = np.arctan(u[0] / u[2])
     min_l = 0.6
-    l = min_l + (1.-min_l) * (np.linalg.norm(u) / T_max)
+    l = min_l + (1.-min_l) * (np.linalg.norm(u[0:3]) / T_max)
     for eng in [eng1_ob, eng2_ob, eng3_ob]:
         eng.rotation_euler = (rx, ry, 0)
         eng.keyframe_insert(data_path='rotation_euler')
@@ -66,11 +68,11 @@ for k in range(K):
     light_ob.energy = fir1_ob.scale[2] * 50
     light_ob.keyframe_insert(data_path='energy')
         
-scene.frame_current += 5
+scene.frame_current += FPS/4
 for fir in [fir1_ob, fir2_ob, fir3_ob]:
     fir.scale[2] = 0
     fir.keyframe_insert(data_path='scale')
-    
+
 light_ob.energy = 0
 light_ob.keyframe_insert(data_path='energy')
 

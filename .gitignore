@@ -5,6 +5,8 @@ legacy/
 .vscode
 
 *.mp4
+*.png
+/evaluation/RocketQuat/Render/
 # *.blend
 *.blend1
 *.blend2

@@ -92,8 +92,8 @@ target_compile_options(scpp PUBLIC "$<$<CONFIG:RELEASE>:${RELEASE_OPTIONS}>")
 # add_executable(lqr_sim scpp/src/LQR_sim.cpp)
 # target_link_libraries(lqr_sim scpp)
 
-# add_executable(sc_tracking scpp/src/SC_tracking.cpp)
-# target_link_libraries(sc_tracking scpp)
+add_executable(sc_tracking scpp/src/SC_tracking.cpp)
+target_link_libraries(sc_tracking scpp)
 
 add_executable(sc_oneshot scpp/src/SC_oneshot.cpp)
 target_link_libraries(sc_oneshot scpp)
