@@ -135,8 +135,8 @@ See existing models in the `socp_models` folder for some examples.
 </p>
 
 <p align="center">
-<a href="https://giant.gfycat.com/nimblezanydairycow.mp4"> <!--  High res, when you upload a file you get a link gfycat.com/slimydistantgoldfish, go to gfycat.com/slimydistantgoldfish.gif inspect the video and you will see two link the giant .mp4 and the thumbs .gif. Alternatively just replace slimydistantgoldfish with your one. -->
-  <img width="400" src="https://thumbs.gfycat.com/nimblezanydairycow-size_restricted.gif"> <!--  Low res -->
+<a href="https://giant.gfycat.com/NimbleZanyDairycow.mp4"> <!--  High res, when you upload a file you get a link gfycat.com/slimydistantgoldfish, go to gfycat.com/slimydistantgoldfish.gif inspect the video and you will see two link the giant .mp4 and the thumbs .gif. Alternatively just replace slimydistantgoldfish with your one (it needs to be capatilised like it is now!!!). -->
+  <img width="400" src="https://thumbs.gfycat.com/NimbleZanyDairycow-size_restricted.gif"> <!--  Low res -->
 </a>
 </p>
 
