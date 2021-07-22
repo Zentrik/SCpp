@@ -127,7 +127,7 @@ See existing models in the `socp_models` folder for some examples.
 </p>
 
 ### My SpaceX Starship Landing Trajectory using sc_tracking
-
+**WARNING**: High quality videos are very large, first one is ~80mb, the second ~400mb.
 <p align="center">
 <a href="https://giant.gfycat.com/WelltodoCoarseBird.mp4">
   <img width="400" src="https://thumbs.gfycat.com/WelltodoCoarseBird-size_restricted.gif">
