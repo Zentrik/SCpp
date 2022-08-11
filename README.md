@@ -61,7 +61,7 @@ cd /home/SCpp/build/
 ```
 Then run the executable, e.g. `./sc_oneshot`
 
-To get 3d video, open the .blend file in blender and render it. For `starship sc_tracking.blend`, use Camera.002 to track the rocket and Camera.001 to have a stationary camera. If you change the code to `body_ob.location = x[1:4] / 100` you can use Camera (it is also stationary).
+To get 3d video, open the .blend file in blender and render it (If the purple flame is not rendering in eevee try changing the start and end under volumentrics under render properties). For `starship sc_tracking.blend`, use Camera.002 to track the rocket and Camera.001 to have a stationary camera. If you change the code to `body_ob.location = x[1:4] / 100` you can use Camera (it is also stationary).
 `animate_landing.blend` and `landingVisualisation.blend` are from https://github.com/EmbersArc/SuccessiveConvexificationFreeFinalTime, only included so you don't have to go look into the history of that repo to find them. The trajectory files from that repo are included so you can test the blend files and `model_6dof_plot.py`.
 Using `animate_landing.blend` and `landingVisualisation.blend` I have added falcon 9 blend files, the v1 is a white falcon 9, whilst the other has the black rings later Falcon 9 versions have.
 
